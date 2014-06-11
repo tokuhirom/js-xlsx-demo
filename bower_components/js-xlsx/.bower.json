@@ -1,0 +1,15 @@
+{
+  "name": "js-xlsx",
+  "homepage": "https://github.com/SheetJS/js-xlsx",
+  "version": "0.7.6",
+  "_release": "0.7.6",
+  "_resolution": {
+    "type": "version",
+    "tag": "v0.7.6",
+    "commit": "87bbe636d3ad19d498a4e57ff874bf530e2b8ac4"
+  },
+  "_source": "git://github.com/SheetJS/js-xlsx.git",
+  "_target": "~0.7.6",
+  "_originalSource": "js-xlsx",
+  "_direct": true
+}

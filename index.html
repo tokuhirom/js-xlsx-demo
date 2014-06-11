@@ -1,0 +1,38 @@
+<!doctype html>
+<html ng-app>
+  <head>
+    <title>js-xslx demo</title>
+    <script src="bower_components/js-xlsx/shim.js"></script>
+    <script src="bower_components/js-xlsx/jszip.js"></script>
+    <script src="bower_components/js-xlsx/xlsx.js"></script>
+    <script src="bower_components/js-xlsx/xlsx.js"></script>
+    <script src="bower_components/FileSaver/FileSaver.js"></script>
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="demo.js"></script>
+    <link href="bower_components/bootstrap/dist/css/bootstrap.css" type="text/css" rel="stylesheet">
+  </head>
+  <body>
+    <div style="margin-top: 20px">
+      <div class="container" ng-controller="ReportCtrl">
+      <div><a  class="btn btn-default" href="#" ng-click="downloadCSV()">Excel ファイルダウンロード</a></div>
+
+        <h1>売上</h1>
+        <table class="report table table-bordered table-hover">
+          <tr>
+            <th>日付</th>
+            <th>販売数</th>
+            <th>売上金額</th>
+            <th>税金</th>
+          </tr>
+          <tr ng-repeat="row in data">
+            <td align="right">{{row.date}}</td>
+            <td class="report-num" align="right">{{row.num}}</td>
+            <td class="report-num" align="right">{{uriage(row)}}</td>
+            <td class="report-num" align="right">{{tax(uriage(row))}}</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </body>
+</html>
